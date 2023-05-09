@@ -33,23 +33,23 @@ export default function SideBar({open}) {
   
   return (
     <>
-    <nav className={`fixed top-0 left-0 h-full w-60 bg-secuandario transform ${
+    <nav className={`fixed top-0 left-0 h-full w-60 bg-white transform ${
         open ? "translate-x-0" : "-translate-x-full"
       } transition-all duration-300`}>{
         console.log(isOpen)
       }
-    <div className="flex flex-col h-full gap-8 items-center p-5">
-        <header>
+    <div className="flex flex-col h-full items-center py-3">
+        {/* <header>
           <div className="flex flex-col gap-2 items-center">
             <img className="w-32 h-32 border border-2 border-selectOption object-cover object-center rounded-full" src="https://images.unsplash.com/photo-1554151228-14d9def656e4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=386&q=80"></img>
             <span className="font-bold">Camila Manrique</span>
             <span>Admin</span>
           </div>
-        </header>
+        </header> */}
       
-        <div className="px-4">
+        <div className="">
           <div  className="">
-            <ul className="flex flex-col gap-2">
+            <ul className="flex flex-col gap-3">
             {items.map(({url, msg, activo},index)=>{
              return (
              <BarElement key={index} url={url} msg={msg} index={index} seleccion={selected} activo={activo}/>
